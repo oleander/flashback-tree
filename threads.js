@@ -13,23 +13,32 @@ var getPosts = function(url, page, working, root, maxPages) {
       throw "no root node found on page " + page;
     }
 
+    if(!working[root]) {
+      working[root] = {};
+    }
+
     $("table.post").each(function(index, post) {
       var id = "p" + $(this).find(".post_message").attr("id").split("_")[2];
       // Ignore root node
       if(id == root) { return; }
-      var cit = $(this).find(".alt2.post-quote > div > a").attr("href");
-      if(cit) {
-        var ccid = cit.split("#")[1];
-        if(!working[ccid]){
-          working[ccid] = [];
-        }
-        working[ccid].push(id);
-      } else {
-        if(!working[root]) {
-          working[root] = [];
-        }
-        working[root].push(id);
+      var hrefs = $(this).find(".post-quote > div > a").map(function(){
+        return $(this).attr("href");
+      }).get();
+
+      if(!hrefs.length) {
+        working[root][id] = 1;
       }
+
+      for (var i = hrefs.length - 1; i >= 0; i--) {
+        cit = hrefs[i];
+        if(cit.match(/p\d+/)) {
+          ccid = cit.split("#")[1];
+          if(!working[ccid]){
+            working[ccid] = {};
+          }
+          working[ccid][id] = 1;
+        }
+      };
     });
 
     // Abort if last page
