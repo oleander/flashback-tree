@@ -7,26 +7,26 @@ A visualization tool for flashback threads.
 <table>
   <tr>
     <td>
-      ![resources/i1.png](resources/i1.png)
+      <img src="resources/i1.png">
     </td>
     <td>
-      ![resources/i2.png](resources/i2.png)
-    </td>
-  </tr>
-  <tr>
-    <td>
-      ![resources/i3.png](resources/i3.png)
-    </td>
-    <td>
-      ![resources/i4.png](resources/i4.png)
+      <img src="resources/i2.png">
     </td>
   </tr>
   <tr>
     <td>
-      ![resources/i5.png](resources/i5.png)
+      <img src="resources/i3.png">
     </td>
     <td>
-      ![resources/i6.png](resources/i6.png)
+      <img src="resources/i4.png">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="resources/i5.png">
+    </td>
+    <td>
+      <img src="resources/i6.png">
     </td>
   </tr>
 </table>
