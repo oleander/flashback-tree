@@ -1,6 +1,21 @@
 # Flashback tree
 
-A visualization tool for flashback threads.
+A graphical visualization tool for flashback threads using dot. 
+Here, a node is represented by a post and an edge a quote.
+
+## Usage
+
+`./run.sh https://www.flashback.org/t12345678`
+
+## Prerequisites
+
+- node js
+- npm
+- twopi (dot)
+
+## Installation
+
+`npm install`
 
 ## Example outputs
 
