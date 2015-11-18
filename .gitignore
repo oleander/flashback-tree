@@ -1,6 +1,5 @@
 node_modules/
 auto.sh
 tmp/
-*.png
 *.dot
 images/
