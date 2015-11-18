@@ -33,7 +33,7 @@ var getPosts = function(url, page, working, root, maxPages) {
     });
 
     // Abort if last page
-    if(result[1] === result[2] || maxPages === 0){
+    if(!result || result[1] === result[2] || maxPages === 0){
       return { tree: working, root: root };
     }
 
